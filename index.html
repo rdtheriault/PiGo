@@ -1,0 +1,53 @@
+<html>
+<head>
+<script>
+
+	function info(){
+		alert("Your presentation will start shortly, you may leave the browser or use another action, press OK to continue");
+	}
+
+</script>
+<style>
+body{
+display:table-cell;
+vertical-align:middle;
+}
+html{
+display:table;
+margin:auto;
+}
+html, body{
+height:100%
+}
+</style>
+</head>
+<body>
+<?php
+	require('run2.php');
+
+?>
+<br>
+<div id="main" style="width:100%;text-align:center;">
+ 
+<table>
+<tr>
+	<td></td>
+	<td><form method="POST" action="index.php"><input type="submit" value="Go"><input type="hidden" name="action" value="fwd"></form></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td><form method="POST" action="index.php"><input type="submit" value="Back"><input type="hidden" name="action" value="bwd"></form></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td><form method="POST" action="index.php"><input type="submit" value="Stop"><input type="hidden" name="action" value="stop"></form></td>
+	<td></td>
+</tr>
+</table>
+
+</div>
+</body>
+</html>
+
