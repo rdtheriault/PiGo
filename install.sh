@@ -23,10 +23,10 @@ echo "Screensaver"
 sudo apt-get install xscreensaver -qq
 echo "***Completed installing programs***"
 
-echo "***Get Templates***"
-sudo wget http://sagefirellc.com/PiDMP/template.odp
-sudo wget http://sagefirellc.com/PiDMP/template.pptx
-echo "***Templated retreived***"
+#echo "***Get Templates***"
+#sudo wget http://sagefirellc.com/PiDMP/template.odp
+#sudo wget http://sagefirellc.com/PiDMP/template.pptx
+#echo "***Templated retreived***"
 
 echo "***Create directories and move files***"
 mkdir /home/pi/temp
@@ -35,31 +35,33 @@ sudo mkdir /var/www/templates
 
 sudo rm /var/www/index.html
 sudo mv index.php /var/www
-sudo mv delete.php /var/www
 sudo mv run2.php /var/www
-sudo mv upload.php /var/www
-sudo mv create.sql /home/pi
-sudo mv OpenShow.sh /home/pi/temp
-sudo mv startvideo.sh /home/pi/temp
-sudo mv startvideos.sh /home/pi/temp
-sudo mv stream.sh /home/pi/temp
+#sudo mv create.sql /home/pi
+sudo mv fwd.py /home/pi/temp
+sudo mv stop.py /home/pi/temp
+sudo mv back.py /home/pi/temp
+sudo mv left.py /home/pi/temp
+sudo mv right.py /home/pi/temp
 sudo mv -f .xscreensaver /home/pi
 sudo mv -f php.ini /etc/php5/apache2
-sudo mv template.odp /var/www/templates
-sudo mv template.pptx /var/www/templates 
+#sudo mv template.odp /var/www/templates
 sudo mv info.txt /var/www/templates/info.txt
 echo ""
 
 
 echo "***Completed creates and moves***"
 
-echo "->Creating database, please enter '.read /home/pi/create.sql'"
-echo "then use '.exit' to continue installation"
-cd /home/pi/temp
-sqlite3 main.db
+#echo "->Creating database, please enter '.read /home/pi/create.sql'"
+#echo "then use '.exit' to continue installation"
+#cd /home/pi/temp
+#sqlite3 main.db
 
 echo "***Changing Permissions***"
 sudo chown -R www-data /home/pi/temp
 sudo chmod 777 /home/pi/temp/main.db
-sudo chmod +x /home/pi/temp/OpenShow.sh
+sudo chmod +x /home/pi/temp/left.py
+sudo chmod +x /home/pi/temp/right.py
+sudo chmod +x /home/pi/temp/stop.py
+sudo chmod +x /home/pi/temp/fwd.py
+sudo chmod +x /home/pi/temp/back.py
 echo "***Change Complete***"
