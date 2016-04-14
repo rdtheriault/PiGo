@@ -13,16 +13,24 @@
 		$output = exec('sudo -u pi python /home/pi/temp/fwd.py');
 	}
 	elseif ($var2 == "stop"){
-		//echo "Yep this would be a video";
+		//echo "Yep this would be a stop";
 		$output = exec('sudo -u pi python /home/pi/temp/stop.py');
 	}
 	elseif ($var2 == "bwd"){
-		//echo "Yep this would be videos";
+		//echo "Yep this would be back";
 		$output = exec('sudo -u pi python /home/pi/temp/back.py');
+	}
+	elseif ($var2 == "right"){
+		//echo "Yep this would be a right";
+		$output = exec('sudo -u pi python /home/pi/temp/right.py');
+	}
+	elseif ($var2 == "left"){
+		//echo "Yep this would be a left";
+		$output = exec('sudo -u pi python /home/pi/temp/left.py');
 	}
 	elseif ($var2 == "stream"){
 		//echo "Yep this would be a stream";
-		$output = exec('sudo -u pi python /home/pi/temp/stream.sh');
+		$output = exec('sudo -u pi python /home/pi/temp/stream.py');
 	}
 
 	//$output = exec('/home/pi/OpenShow.sh '.$var);
