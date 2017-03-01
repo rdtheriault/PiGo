@@ -28,6 +28,11 @@ echo "***Completed installing programs***"
 #sudo wget http://sagefirellc.com/PiDMP/template.pptx
 #echo "***Templated retreived***"
 
+echo "Setting up GoPiGo"
+sudo git clone https://github.com/DexterInd/GoPiGo.git
+#cd GoPiGo/Software/Python/
+sudo python GoPiGo/Software/Python/setup.py install
+
 echo "***Create directories and move files***"
 mkdir /home/pi/temp
 mkdir /home/pi/temp/pres
